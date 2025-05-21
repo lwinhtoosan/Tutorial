@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var let constant - example</title>
+</head>
+<body>
+    <h1>Java Script Var, let , const Variable Example.</h1>
+    <script>
+        var name="Alice";
+        console.log(name);
+
+        var name="bob";
+        console.log(name);
+
+        let age=25;
+        console.log(age);
+
+       age=30;
+       console.log(age);
+
+       const country="USA";
+       console.log(country);
+
+       function testVarLetConst() {
+        if (true) {
+            var a=10;
+            let b=20;
+            const c=30;
+        }
+        console.log(a);
+       }
+       testVarLetConst()
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            overflow-x:auto;
+        }
+       table {
+        width:100%;
+        border-collapse:collapse;
+        
+       }
+       table,
+       th,
+       td {
+        border-bottom:1px solid black;
+       
+       }
+       thead {
+        /* background-color:skyblue; */
+        /* color:#ffffff; */
+       }
+       thead,
+       th {
+        text-align: center;
+        height:40px;
+        
+       }
+       tbody>tr:nth-child(even) {
+        /* background-color: red; */
+       }
+       tbody>tr:nth-child(odd) {
+        color:green;
+       }
+       tr:hover {
+        background-color:aliceblue;
+       }
+    </style>
+</head>
+<body>
+    <div>
+    <table>
+        <thead>
+            <tr>
+                <th>Heading</th>
+                <th>Heading</th>
+            </tr>
+        <tbody>
+            <tr>
+                <td>
+                    <ol>
+                        <li>Item1</li>
+                    </ol>
+                </td>
+                <td>
+                    <ol>
+                        <li>Item1</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>Item 2</td>
+                <td>Item 2</td>
+            </tr>
+            <tr>
+                <td>Item 3</td>
+                <td>Item 3</td>
+            </tr>
+            <tr>
+                <td>Item 4</td>
+                <td>Item 4</td>
+            </tr>
+        </tbody>
+        </thead>
+    </table>
+    </div>
+</body>
+</html>
