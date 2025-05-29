@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(1);
+        console.log(2);
+        setTimeout(()=>console.log(3),5000);
+        console.log(4);
+
+        function add1250Times(y){
+            let something = 0;
+            for (let x = 1; x <= 1250; x++){
+                something += x * y;
+            }
+            return something;
+        }
+        console.log(add1250Times(10));
+        console.log(add1250Times(20));
+        console.log(add1250Times(50));
+
+        function first(a) {
+            return a * 2;
+        }
+
+        function second(x, y) { //*second parameter Y ကို first function ပြန်ခေါ်သုံးချင်လို့ Y ကို ပုံသေထားပြီး console ခေါ်တဲ့‌နေရာမှာ first function name ထည့်ပေး။*//
+            let z = x * x;
+            return y(z);
+        }
+
+        console.log(first(2));
+        console.log(second(2, first))
+
+    </script>
+    
+</body>
+</html>

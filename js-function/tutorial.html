@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function greet() {
+            console.log("Hello!");
+        }
+        greet();
+
+        const greet1=function greeting() {
+            console.log("Hello,welcome to Zootopia!");
+        }
+        greet1();
+
+        const greet2= () => {
+            console.log("hello,world");
+        }
+        greet2();
+
+        let add= function(a,b) {
+            return a+b
+        };
+        console.log(add(5,5));
+
+        function sum(c,d) {
+            return c * d
+        }
+        let result= sum(4,5);
+        console.log(result);
+
+        function multi(n) {
+            return n * n
+        }
+        console.log(multi(6));
+
+        let add1 = (a,b) => a/b;
+        console.log(add1(10,2));
+
+        const divided=function (a,b) {
+            return a/b;
+        }
+        console.log(10/2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            constructor(name) {
+                this.name=name;
+            }
+        }
+
+        class Child extends Parent{
+            constructor(name,age) {
+                super(name);
+                this.age = age;
+            }
+        
+        showInfo() {
+            console.log(`Name: ${this.name}, Age: ${this.age}`);
+        }
+         }
+         const child = new Child("Alice",12);
+         child.showInfo(); //Name:Alice, Age:12
+
+         class Animal {
+            speak() {
+                console.log("Animal makes a sounnd");
+            }
+         }
+         class Dog extends Animal {
+            speak() {
+                super.speak();
+                console.log("Dog barks");
+            }
+         }
+
+         const dog=new Dog();
+         dog.speak(); //Animal makes a sound //Dog barks
+
+         class Parent2 {
+            constructor() {
+                this.role="admin";
+            }
+         }
+         class Child2 extends Parent2 {
+            getRole() {
+                return this.role; //inherited from parent
+            }
+         }
+         const c=new Child2();
+         console.log(c.getRole()); //admin
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students = [
+            {name: "Alice", age: 23,scores: [77,88,99]},
+            {name: "Lucas", age: 22,scores: [88,89,90]},
+            {name: "Suyou", age: 22,scores: [99,90,98]},
+        ]
+
+        function calculateAverage(scores) {
+            let total = 0;
+            for (let score of scores) {
+                total +=score;
+               
+            }
+             return total/scores.length;
+        }
+        function addStudent(name,age,scores) {
+            students.push({name,age,scores});
+        }
+        addStudent("Kagura", 23,[90,99,98]);
+        console.log(students);
+
+        function showStudent() {
+            students.forEach((student)=> {
+                let avg=calculateAverage(student.scores)
+                console.log(`${student.name} (${student.age}) average score - ${avg.toFixed(2)}` );
+            })
+        }
+        showStudent();
+
+        function topStudent() {
+            let topstudent = students[0];
+            let topavg = calculateAverage(topstudent.scores);
+
+            for (let student of students) {
+                let avg = calculateAverage(student.scores);
+                if(avg>topavg) {
+                    topstudent=student;
+                    topavg=avg;
+                }
+            }
+            if(topstudent) {
+                console.log(`The top student is ${topstudent.name} (${topstudent.age} years old) with average score ${topavg.toFixed(2)}`);
+            }
+        }
+        topStudent();
+    </script>
+</body>
+</html>
